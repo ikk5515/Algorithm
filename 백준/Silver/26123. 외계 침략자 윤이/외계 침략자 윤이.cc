@@ -1,9 +1,9 @@
 // BOJ_26123_외계 침략자 윤이
 #include <iostream>
-#include <map>
+#include <vector>
 using namespace std;
 
-map<int, int> m;
+vector<int> v;
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
@@ -13,14 +13,14 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         int tmp; cin >> tmp;
-        m[i] = tmp;
+        v.push_back(tmp);
         if (tmp > max_num) {
             max_num = tmp;
         }
     }
 
     long long cnt = 0;
-    for (auto iter : m) {
+    for (auto iter : v) {
         if (n == 1) {
             if (d >= max_num) {
                 cout << max_num;
@@ -31,10 +31,10 @@ int main() {
             }
         }
         if (max_num >= 1) {
-            if (iter.second < d && max_num < d) {
-                cnt += iter.second;
-            } else if (iter.second > max_num - d) {
-                cnt += d - (max_num - iter.second);
+            if (iter < d && max_num < d) {
+                cnt += iter;
+            } else if (iter > max_num - d) {
+                cnt += d - (max_num - iter);
             }
         }
     }
