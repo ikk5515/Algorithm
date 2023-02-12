@@ -15,7 +15,7 @@ int main() {
     arr[4] = 14;
     arr[5] = 42;
     arr[6] = 132;
-    for (int i = 6; i < 36; i++) {
+    for (int i = 7; i < 36; i++) {
         long long sum = 0;
         for (int j = 0; j < i; j++) {
             sum += arr[i - j - 1] * arr[j];
