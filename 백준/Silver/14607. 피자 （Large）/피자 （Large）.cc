@@ -1,4 +1,4 @@
-// BOJ_14606_피자 (Small)
+// BOJ_14607_피자 (Large)
 #include <iostream>
 using namespace std;
 
