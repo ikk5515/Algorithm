@@ -1,0 +1,4 @@
+# BOJ_15740_A+B-9
+a, b = map(int, input().split())
+
+print(a + b)
