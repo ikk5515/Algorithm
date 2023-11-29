@@ -23,7 +23,7 @@ int main() {
             for (int j = 0; j < str.size(); j++) {
                 string tmp = "";
                 for (int k = j; k < str.size(); k++) {
-                    tmp = tmp + str[k];
+                    tmp += str[k];
                 }
 
                 for (int g = 0; g < j; g++) {
