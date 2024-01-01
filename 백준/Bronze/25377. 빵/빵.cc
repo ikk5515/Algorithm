@@ -10,8 +10,8 @@ int main() {
     int ans = 1e9;
     while (N--) {
         cin >> A >> B;
-        if (A <= B) ans = min(ans, B);
-        if (ans == 1e9) ans = -1;
+        if (A <= B && B < ans) ans = B;
     }
-    cout << ans;
+    if (ans == 1e9) cout << -1;
+    else cout << ans;
 }
